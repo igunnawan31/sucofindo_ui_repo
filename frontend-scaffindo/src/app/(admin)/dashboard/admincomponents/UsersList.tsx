@@ -32,7 +32,7 @@ const UserLists = () => {
     return (
         <>
             <div className="flex gap-3">
-                <CategoryProducts />
+                {/* <CategoryProducts /> */}
                 <SearchProducts 
                     placeholder="Search user" 
                     onSearch={handleSearch}

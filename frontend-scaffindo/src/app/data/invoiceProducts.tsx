@@ -1,3 +1,4 @@
+import { ImDropbox } from "react-icons/im";
 import { IoLeaf, IoCube, IoCar, IoStorefront, IoPerson } from "react-icons/io5";
 
 const invoiceProducts = [
@@ -243,6 +244,83 @@ const invoiceProducts = [
             },
         ],
     },
+    {
+        id: 5,
+        name: "Aqua",
+        description: "Air dengan kemurnian 100%",
+        category: ["FOOD_BEVERAGES"],
+        image: "/assets/images/sucofindo-1.jpg",
+        harga: 4000,
+        certification: [
+            {
+                certificationId: "CERT-AQUA-001",
+                certificationName: "BPOM",
+                certificationExpired: "2026-12-31",
+            },
+            {
+                certificationId: "CERT-AQUA-002",
+                certificationName: "HALAL",
+                certificationExpired: "2027-06-30",
+            },
+        ],
+        labels: [
+            {
+                id: "Batch-Aqua-001",
+                qrCode: "QR_Batch-Aqua-001",
+                tracking: [
+                    { role: "pabrik", status: "Produksi Selesai", updatedAt: "2025-09-01T10:00:00Z" },
+                    { role: "distributor", status: "Telah diserahkan ke agent A", updatedAt: "2025-09-05T10:00:00Z" },
+                    { role: "agent", status: "Telah diserahkan ke retailer B", updatedAt: "2025-09-15T10:00:00Z" },
+                    { role: "retailer", status: "Dibeli oleh Customer", updatedAt: "2025-09-25T10:00:00Z" },
+                    { role: "consument", status: "Dibeli dengan harga Rp 4.000,00", updatedAt: "2025-09-25T10:00:00Z" },
+                ],
+                journey: [
+                    {
+                        id: 1,
+                        icon: <IoLeaf className="w-6 h-6 text-green-500" />,
+                        title: "Pabrik",
+                        date: "1 September 2025, 10:00 WIB",
+                        details: ["Status: Produksi selesai"],
+                    },
+                    {
+                        id: 2,
+                        icon: <IoCar className="w-6 h-6 text-blue-500" />,
+                        title: "Distributor",
+                        date: "5 September 2025, 15:00 WIB",
+                        details: ["Status: Diterima dari Pabrik A", "Status: Dalam perjalanan menuju agent A", "Telah diserahkan ke agent A"],
+                    },
+                    {
+                        id: 3,
+                        icon: <IoStorefront className="w-6 h-6 text-green-500" />,
+                        title: "Agent",
+                        date: "15 September 2025, 10:00 WIB",
+                        details: ["Status: Diterima dari Distributor A", "Status: Dalam perjalanan menuju retail B", "Telah diserahkan ke retail B"],
+                    },
+                    {
+                        id: 4,
+                        icon: <ImDropbox className="w-6 h-6 text-green-500" />,
+                        title: "Retail",
+                        date: "25 September 2025, 10:00 WIB",
+                        details: ["Status: Diterima dari Retail A", "Status: Telah dijual kepada Customer"],
+                    },
+                    {
+                        id: 5,
+                        icon: <IoPerson className="w-6 h-6 text-green-500" />,
+                        title: "Customer",
+                        date: "25 September 2025, 10:00 WIB",
+                        details: ["Status: Dibeli dengan harga Rp 4.000,00"],
+                    },
+                ],
+            },
+        ],
+        invoices: [
+            {
+                id: "INV-001",
+                labels: ["KaosPrinting-1", "KaosPrinting-2"],
+                qrCode: "QR_Invoice_KaosPrinting_INV001",
+            },
+        ],
+    }
 ];
 
 export default invoiceProducts;

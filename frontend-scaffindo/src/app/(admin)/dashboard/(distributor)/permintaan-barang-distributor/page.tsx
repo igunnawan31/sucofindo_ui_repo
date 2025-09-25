@@ -18,7 +18,7 @@ const PermintaanBarangDistributor = () => {
     return (
         <>
             <div className="flex gap-3">
-                <CategoryProducts />
+                {/* <CategoryProducts /> */}
                 <SearchProducts 
                     placeholder="Search your products" 
                     onSearch={handleSearch}
