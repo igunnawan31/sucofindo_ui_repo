@@ -61,11 +61,11 @@ const ScanProduct:React.FC<Props> = ({onProductCode}) => {
         <div className='mt-10 flex flex-col lg:flex-row gap-6'>
             <div className='lg:w-1/2 w-full order-1'>
                 {mode === "camera" ? (
-                    <div className='w-full h-[24rem] bg-black flex items-center justify-center text-white overflow-hidden'>
-                        <div id="reader" className="w-full h-[24rem]"></div>
+                    <div className='w-full h-[40rem] bg-black flex items-center justify-center text-white overflow-hidden'>
+                        <div id="reader" className="w-full h-[40rem]"></div>
                     </div>
                 ) : (
-                    <div className="w-full h-[24rem] bg-gray-100 rounded-xl flex flex-col items-center justify-center border-2 border-dashed border-gray-400 p-6">
+                    <div className="w-full h-[40rem] bg-gray-100 rounded-xl flex flex-col items-center justify-center border-2 border-dashed border-gray-400 p-6">
                         <p className="text-gray-500 mb-4">Enter Product Code</p>
                         <input
                             type="text"
@@ -83,7 +83,7 @@ const ScanProduct:React.FC<Props> = ({onProductCode}) => {
                     </div>
                 )}
             </div>
-             <div className="lg:w-1/2 w-full order-2 border-2 border-blue-900 border-dashed p-5 rounded-lg mb-6">
+             <div className="lg:w-1/2 w-full order-2 border-2 border-blue-900 border-dashed p-5 rounded-lg mb-6 lg:mb-0">
                 <div className="flex items-center gap-4 mb-6">
                     <div className="bg-gray-200 rounded-lg p-5 flex gap-2">
                         {["camera", "code"].map((m) => (
