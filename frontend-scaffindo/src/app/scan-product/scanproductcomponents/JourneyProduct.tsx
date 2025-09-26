@@ -51,7 +51,7 @@ const JourneyProduct: React.FC<Props> = ({productCode}) => {
     const productJourney = label.journey || [];
 
     return (
-        <div className="w-full p-6 bg-gray-200 rounded-lg mb-12">
+        <div className="w-full p-6 bg-gray-200 rounded-lg pb-12">
             <div className="text-center mb-8">
                 <h2 className="text-blue-900 text-2xl font-bold flex items-center justify-center gap-2">
                     {label.id}
