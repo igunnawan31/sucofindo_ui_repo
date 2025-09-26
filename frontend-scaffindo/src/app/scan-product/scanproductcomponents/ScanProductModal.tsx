@@ -12,7 +12,6 @@ const ScanProduct:React.FC<Props> = ({onProductCode}) => {
     const isScanningRef = useRef(false);
 
     useEffect(() => {
-
         const initScanner = async () => {
             if (mode !== "camera") {
                 if (isScanningRef.current) {
@@ -32,7 +31,8 @@ const ScanProduct:React.FC<Props> = ({onProductCode}) => {
             if (readerElement) {
                 const rect = readerElement.getBoundingClientRect();
                 const size = Math.min(rect.width, rect.height);
-                qrboxConfig = { width: size * 1.5, height: size * 1.5 };
+                const clampedSize = Math.max(200, Math.min(size, 350));
+                qrboxConfig = { width: clampedSize, height: clampedSize };
             }
 
             await scannerRef.current.start(
@@ -61,7 +61,7 @@ const ScanProduct:React.FC<Props> = ({onProductCode}) => {
         <div className='mt-10 flex flex-col lg:flex-row gap-6'>
             <div className='lg:w-1/2 w-full order-1'>
                 {mode === "camera" ? (
-                    <div className='w-full h-full bg-black flex items-center justify-center text-white'>
+                    <div className='w-full h-[24rem] bg-black flex items-center justify-center text-white overflow-hidden'>
                         <div id="reader" className="w-full h-[24rem]"></div>
                     </div>
                 ) : (
