@@ -72,7 +72,7 @@ const ScanProduct:React.FC<Props> = ({onProductCode}) => {
                             value={productCode}
                             onChange={(e) => setProductCode(e.target.value)}
                             placeholder="e.g. KaosPrinting-1"
-                            className="w-full max-w-sm px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
+                            className="w-full max-w-sm px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 text-black"
                         />
                         <button
                             onClick={() => onProductCode(productCode)}
@@ -91,7 +91,7 @@ const ScanProduct:React.FC<Props> = ({onProductCode}) => {
                             key={m}
                             className={`cursor-pointer px-4 py-2 rounded-lg ${
                             mode === m
-                                ? "bg-blue-900 text-white"
+                                ? "bg-blue-900 text-black"
                                 : "bg-gray-200 text-gray-700"
                             }`}
                             onClick={() => {
@@ -106,12 +106,12 @@ const ScanProduct:React.FC<Props> = ({onProductCode}) => {
                 </div>
                 <div>
                     {mode === "camera" && (
-                        <p className="text-gray-700">
+                        <p className="text-black">
                             Use your device camera to scan the product.
                         </p>
                     )}
                     {mode === "code" && (
-                        <p className="text-gray-700">
+                        <p className="text-black">
                             Enter the product code manually.
                         </p>
                     )}
