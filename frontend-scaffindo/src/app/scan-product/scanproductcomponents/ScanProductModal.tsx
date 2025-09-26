@@ -91,7 +91,7 @@ const ScanProduct:React.FC<Props> = ({onProductCode}) => {
                             key={m}
                             className={`cursor-pointer px-4 py-2 rounded-lg ${
                             mode === m
-                                ? "bg-blue-900 text-black"
+                                ? "bg-blue-900 text-white"
                                 : "bg-gray-200 text-gray-700"
                             }`}
                             onClick={() => {
