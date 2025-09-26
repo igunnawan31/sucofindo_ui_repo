@@ -13,7 +13,7 @@ const AboutUsPage = () => {
             <NavbarComponentsHome />
             <section
                 id="InformationProduct"
-                className="relative pt-32 pb-32 bg-cover bg-center"
+                className="relative pt-32 pb-32 bg-cover bg-center bg-white"
             >
                 <div className="relative z-10 h-full px-4 lg:px-8">
                     <div className="container mx-auto max-w-11/12">
