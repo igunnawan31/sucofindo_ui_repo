@@ -83,7 +83,7 @@ const ScanProduct:React.FC<Props> = ({onProductCode}) => {
                     </div>
                 )}
             </div>
-             <div className="lg:w-1/2 w-full order-2 border-2 border-blue-900 border-dashed p-5 rounded-lg">
+             <div className="lg:w-1/2 w-full order-2 border-2 border-blue-900 border-dashed p-5 rounded-lg mb-6">
                 <div className="flex items-center gap-4 mb-6">
                     <div className="bg-gray-200 rounded-lg p-5 flex gap-2">
                         {["camera", "code"].map((m) => (
